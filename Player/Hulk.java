@@ -3,10 +3,10 @@ import MyInterface.*;
 import View.*;
 import Weapon.*;
 
-public class 헐크 extends Player implements Throowable, Hitable{
+public class Hulk extends Player implements Throowable, Hitable{
 
-	public 헐크() {}
-	public 헐크(String name) {
+	public Hulk() {}
+	public Hulk(String name) {
 		super(name);
 		this.setPower(100);
 		this.sethp(1000);
@@ -14,26 +14,26 @@ public class 헐크 extends Player implements Throowable, Hitable{
 	public void throow(Player target) {
 		int power = 0;
 		try {
-			if (this.getWeapon() instanceof 묠니르) {			
-				System.out.println("공격실패!묠니르는 토르만이 사용할 수 있습니다.");
+			if (this.getWeapon() instanceof Hammer) {			
+				System.out.println("Attack Failed! Only Thor can use hammer.");
 		    }		
 			else {
-		        System.out.println("던지기 공격! power가  2배!!");	
-		        System.out.println("던지기 기본power는 "+this.getWeapon().getPower());
+		        System.out.println("Throwing attack! power doubled!!");	
+		        System.out.println("Original power is "+this.getWeapon().getPower());
 		        power = this.getWeapon().getPower()*2 + this.getPower();
 		        target.sethp(target.gethp() - power);
 		    }
 		}
 		catch(ClassCastException e) {
-			System.out.println(this.getWeapon()+"은 던질 수 없습니다.");
+			System.out.println(this.getWeapon()+"cannot be thrown.");
 		}			
 	}
 	public void hit(Player target) {
-		if (this.getWeapon() instanceof 묠니르) {
-			System.out.println("공격실패!묠니르는 토르만이 사용할 수 있습니다.");
+		if (this.getWeapon() instanceof Hammer) {
+			System.out.println("Attack Failed! Only Thor can use hammer.");
 		}
 		else {
-		    System.out.println("때리기 공격");
+		    System.out.println("Hit!");
 		    
 		    int power = this.getPower();
 		    

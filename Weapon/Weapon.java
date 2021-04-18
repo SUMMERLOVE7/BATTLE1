@@ -49,12 +49,12 @@ public class Weapon{
         }
        
 	public void attack(Player target) {
-		System.out.println(this.name+"(으)로 공격합니다");
-		if(player.getWeapon() instanceof 묠니르) {
-			if(player instanceof 토르) {
+		System.out.println("Attack with"+ this.name);
+		if(player.getWeapon() instanceof Hammer) {
+			if(player instanceof Thor) {
 				player.attack(target);
 			}
-			else System.out.println("무기사용불가");
+			else System.out.println("Cannot use weapon");
 		}
 		target.sethp(target.gethp() - power);		
 	}

@@ -27,15 +27,15 @@ import javax.swing.JProgressBar;
 public class GameWindow_2 extends JFrame {
 
 	private JPanel contentPane;
-	JButton 랜덤플레이어 = new JButton("");
-	JButton 무기고1 = new JButton("");
-	JButton 무기고2 = new JButton("");
-	JButton 공격1 = new JButton("");
-	JButton 공격2 = new JButton("");
-	JButton 특수공격1 = new JButton("");
-	JButton 특수공격2 = new JButton("");
-	JLabel 플레이어2 = new JLabel("");
-	JLabel 플레이어1 = new JLabel("");
+	JButton randomplayer = new JButton("");
+	JButton arsenal1 = new JButton("");
+	JButton arsenal2 = new JButton("");
+	JButton attack1 = new JButton("");
+	JButton attack2 = new JButton("");
+	JButton specialAttack1 = new JButton("");
+	JButton specialAttack2 = new JButton("");
+	JLabel gameplayer2 = new JLabel("");
+	JLabel gameplayer1 = new JLabel("");
 	JTextArea textArea = new JTextArea();
 	JProgressBar progressBar1 = new JProgressBar();
 	JProgressBar progressBar2 = new JProgressBar();
@@ -73,19 +73,19 @@ public class GameWindow_2 extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		플레이어1.setVerticalAlignment(SwingConstants.TOP);	
-		플레이어1.setBounds(16, 89, 267, 207);
-		플레이어1.setForeground(Color.BLACK);
-		플레이어1.setBackground(Color.BLACK);
-		contentPane.add(플레이어1);
+		gameplayer1.setVerticalAlignment(SwingConstants.TOP);	
+		gameplayer1.setBounds(16, 89, 267, 207);
+		gameplayer1.setForeground(Color.BLACK);
+		gameplayer1.setBackground(Color.BLACK);
+		contentPane.add(gameplayer1);
 		
-		플레이어2.setVerticalAlignment(SwingConstants.TOP);	
-		플레이어2.setBounds(616, 89, 256, 207);
-		플레이어2.setForeground(Color.BLACK);
-		플레이어2.setBackground(Color.BLACK);
-		contentPane.add(플레이어2);
+		gameplayer2.setVerticalAlignment(SwingConstants.TOP);	
+		gameplayer2.setBounds(616, 89, 256, 207);
+		gameplayer2.setForeground(Color.BLACK);
+		gameplayer2.setBackground(Color.BLACK);
+		contentPane.add(gameplayer2);
 		
-		랜덤플레이어.addActionListener(new ActionListener() {
+		randomplayer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				chooseplayer();
 				progressBar1.setMaximum(player1.gethp());
@@ -94,8 +94,9 @@ public class GameWindow_2 extends JFrame {
 				progressBar2.setValue(player2.gethp());
 				textArea.append("player1 : "+player1.name+"\n");
 				textArea.append("player2 : "+player2.name+"\n");	
-				textArea.append("무기를 먼저 정해주십시오\n");
-				textArea.append("만약 무기사용이 불가하다면 공격실패로 target의 hp유지\n");
+				textArea.append("Select Weapon first\n");
+				textArea.append("Please select weapon, after go to arsena\n");
+				textArea.append("If weapon cannot be used, target's hp is the same.\n");
 				textArea.append("------------------------------------------------\n");
 
 				System.out.println("player1 : "+player1.name);
@@ -103,15 +104,15 @@ public class GameWindow_2 extends JFrame {
 				System.out.println("-----------------------------------------");
 				player1.show();
 				player2.show();
-				System.out.println("무기를 먼저 정해주십시오");
+				System.out.println("Select Weapon first\n");
 			}
 		});
-		랜덤플레이어.setBounds(314, 168, 267, 94);	
-		랜덤플레이어.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBC84\uD2BC2\uB2E4\uC2DC.PNG"));
-		랜덤플레이어.setFont(new Font("배달의민족 한나체 Pro", Font.PLAIN, 20));
-		contentPane.add(랜덤플레이어);
+		randomplayer.setBounds(314, 168, 267, 94);	
+		randomplayer.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBC84\uD2BC2\uB2E4\uC2DC.PNG"));
+		randomplayer.setFont(new Font("배달의민족 한나체 Pro", Font.PLAIN, 20));
+		contentPane.add(randomplayer);
 		
-		무기고1.addActionListener(new ActionListener() {
+		arsenal1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				player = player1;
 				
@@ -123,14 +124,14 @@ public class GameWindow_2 extends JFrame {
 					gw3 = new GameWindow_3();
 				}
 				gw3.setVisible(true);
-				System.out.println("무기고로 이동");
+				System.out.println("Go to arsenal");
 			}
 		});
-		무기고1.setBounds(55, 344, 210, 86);				
-		무기고1.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBB34\uAE30\uACE0\uBC84\uD2BC.PNG"));
-		contentPane.add(무기고1);
+		arsenal1.setBounds(55, 344, 210, 86);				
+		arsenal1.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBB34\uAE30\uACE0\uBC84\uD2BC.PNG"));
+		contentPane.add(arsenal1);
 		
-		무기고2.addActionListener(new ActionListener() {
+		arsenal2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				player = player2;
 				
@@ -143,103 +144,103 @@ public class GameWindow_2 extends JFrame {
 					gw3 = new GameWindow_3();
 				}
 				gw3.setVisible(true);
-				System.out.println("무기고로 이동");
+				System.out.println("Go to arsenal");
 			}
 		});
-		무기고2.setBounds(632, 344, 210, 86);	
-		무기고2.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBB34\uAE30\uACE0\uBC84\uD2BC.PNG"));
-		contentPane.add(무기고2);
+		arsenal2.setBounds(632, 344, 210, 86);	
+		arsenal2.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBB34\uAE30\uACE0\uBC84\uD2BC.PNG"));
+		contentPane.add(arsenal2);
 		
-		공격2.addActionListener(new ActionListener() {
+		attack2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int power = player2.getPower();
 				int value = progressBar1.getValue() - power;
 				
 				player1.sethp(player1.gethp() - power);
 				progressBar1.setValue(player1.gethp());
-				textArea.append(player1.name+"에게 단순공격!!\n");
-				textArea.append(player1.name+"의 남은 hp : "+player1.gethp()+"\n");
+				textArea.append("Attack "+player1.name+"!!\n");
+				textArea.append(player1.name+"'s remaining hp  : "+player1.gethp()+"\n");
 				textArea.append("--------------------------------------------\n");
 				
-				System.out.println(player1.name+"에게 단순공격");
+				System.out.println("Attack "+player1.name);
 				System.out.println("-----------------------------------------");
 				player1.show();
 				player2.show();
 				
 				if(player1.gethp() <= 0) {
-					textArea.append("================게임종료================");
+					textArea.append("================Game Over================");
 					System.out.println("==================Game Over==================");
 				}
 			}
 		});
-		공격2.setBounds(632, 435, 210, 86);
-		공격2.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uACF5\uACA9\uD558\uAE30\uBC84\uD2BC.PNG"));
-		contentPane.add(공격2);
+		attack2.setBounds(632, 435, 210, 86);
+		attack2.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uACF5\uACA9\uD558\uAE30\uBC84\uD2BC.PNG"));
+		contentPane.add(attack2);
 		
-		공격1.setBounds(55, 435, 210, 86);	
-		공격1.addActionListener(new ActionListener() {
+		attack1.setBounds(55, 435, 210, 86);	
+		attack1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int power = player1.getPower();
 				int value = progressBar2.getValue() - power;
 				player2.sethp(player2.gethp() - power);
 				progressBar2.setValue(player2.gethp());
-				textArea.append(player2.name+"에게 단순공격!!\n");
-				textArea.append(player2.name +"의 남은 hp : "+player2.gethp()+"\n");
+				textArea.append("Attack "+player2.name+"!!\n");
+				textArea.append(player2.name +"'s remaining hp : "+player2.gethp()+"\n");
 				textArea.append("--------------------------------------------\n");
 				
-				System.out.println(player1.name+"에게 단순공격");				
+				System.out.println("Attack "+player1.name+"!!\n");				
 				System.out.println("-----------------------------------------");
 				player1.show();
 				player2.show();
 				
 				if(player2.gethp()<=0) {
-					textArea.append("================게임종료================");
+					textArea.append("================Game Over================");
 					System.out.println("==================Game Over==================");
 				}
 			}
 		});
-		공격1.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uACF5\uACA9\uD558\uAE30\uBC84\uD2BC.PNG"));
-		contentPane.add(공격1);
+		attack1.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uACF5\uACA9\uD558\uAE30\uBC84\uD2BC.PNG"));
+		contentPane.add(attack1);
 		
-		특수공격1.addActionListener(new ActionListener() {
+		specialAttack1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
 				wp = gw3.weapon;
-				textArea.append(player2.name+"에게"+"특수 공격!!\n");				
+				textArea.append("Special Attack to "+player2.name+"!!\n");				
 				player1.setWeapon(wp);
 			    player1.attack(player2);			
-				textArea.append(player2.name +"의 남은 hp : "+player2.gethp()+"\n");
+				textArea.append(player2.name +"'s remaining hp : "+player2.gethp()+"\n");
 				textArea.append("--------------------------------------------\n");
 				progressBar2.setValue(player2.gethp());
 				
 				if(player2.gethp()<= 0) {
-					textArea.append("================게임종료================\n");
+					textArea.append("================Game Over================\n");
 					System.out.println("==================Game Over==================");
 				}
 			}
 		});
-		특수공격1.setBounds(55, 525, 210, 86);		
-		특수공격1.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD2B9\uC218\uACF5\uACA9\uD558\uAE30\uBC84\uD2BC.PNG"));
-		contentPane.add(특수공격1);
+		specialAttack1.setBounds(55, 525, 210, 86);		
+		specialAttack1.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD2B9\uC218\uACF5\uACA9\uD558\uAE30\uBC84\uD2BC.PNG"));
+		contentPane.add(specialAttack1);
 		
-		특수공격2.addActionListener(new ActionListener() {
+		specialAttack2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				wp = gw3.weapon;
-				textArea.append(player1.name+"에게"+"특수 공격!!\n");
+				textArea.append("Special Attack to "+player1.name+"!!\n");
 				player2.setWeapon(wp);   
 				player2.attack(player1);							
-				textArea.append(player1.name+"의 남은 hp : "+player1.gethp()+"\n");
+				textArea.append(player1.name+"'s remaining hp : "+player1.gethp()+"\n");
 				textArea.append("--------------------------------------------\n");
 				progressBar1.setValue(player1.gethp());
 				
 				if(player1.gethp()<=0) {
-					textArea.append("================게임종료================\n");
+					textArea.append("================Game Over================\n");
 					System.out.println("==================Game Over==================");
 				}
 			}
 		});
-		특수공격2.setBounds(632, 525, 210, 86);		
-		특수공격2.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD2B9\uC218\uACF5\uACA9\uD558\uAE30\uBC84\uD2BC.PNG"));
-		contentPane.add(특수공격2);
+		specialAttack2.setBounds(632, 525, 210, 86);		
+		specialAttack2.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD2B9\uC218\uACF5\uACA9\uD558\uAE30\uBC84\uD2BC.PNG"));
+		contentPane.add(specialAttack2);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(66, 20, 750, 59);
@@ -260,57 +261,57 @@ public class GameWindow_2 extends JFrame {
 		progressBar2.setBounds(603, 301, 269, 33);
 		contentPane.add(progressBar2);
 		
-		JLabel 배경 = new JLabel("");
-		배경.setBounds(0, 0, 924, 631);
-		배경.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD50C\uB808\uC774\uD654\uBA74big.PNG"));
-		contentPane.add(배경);
+		JLabel background2 = new JLabel("");
+		background2.setBounds(0, 0, 924, 631);
+		background2.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD50C\uB808\uC774\uD654\uBA74big.PNG"));
+		contentPane.add(background2);
 	}
 	public void chooseplayer() {
 		int m = (int)(Math.random()*234 % 6);
 		String []imgfile = {"D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uCEA1\uD2F4\uC544\uBA54\uB9AC\uCE741.png", "D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD5D0\uD06C1.png", "D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD1A0\uB9741.png", "D:\\이대\\2학년 1학기\\객체지향프로그래밍\\기말과제\\블랙위도우.png", "D:\\이대\\2학년 1학기\\객체지향프로그래밍\\기말과제\\호크아이1.png"};
-		JLabel [] labels = {플레이어1, 플레이어2};	
+		JLabel [] labels = {gameplayer1, gameplayer2};	
 		
 		if (m == 0) {
-			player1 = new 헐크("헐크");
-			player2 = new 호크아이("호크아이");
+			player1 = new Hulk("Hulk");
+			player2 = new HawkEye("Hawk eye");
 
-			플레이어1.setIcon(new ImageIcon(imgfile[1]));			
-			플레이어2.setIcon(new ImageIcon(imgfile[4]));			
+			gameplayer1.setIcon(new ImageIcon(imgfile[1]));			
+			gameplayer2.setIcon(new ImageIcon(imgfile[4]));			
 		}
 		else if(m==1) {
-			player1 = new 호크아이("호크아이");
-			player2 = new 블랙위도우("블랙위도우");
+			player1 = new HawkEye("Hawk eye");
+			player2 = new BlackWidow("Black widow");
 			
-			플레이어1.setIcon(new ImageIcon(imgfile[4]));
-			플레이어2.setIcon(new ImageIcon(imgfile[3]));			
+			gameplayer1.setIcon(new ImageIcon(imgfile[4]));
+			gameplayer2.setIcon(new ImageIcon(imgfile[3]));			
 		}
 		else if (m == 2) {
-			player1 = new 블랙위도우("블랙위도우");
-			player2 = new 토르("토르");
+			player1 = new BlackWidow("Black widow");
+			player2 = new Thor("Thor");
 			
-			플레이어1.setIcon(new ImageIcon(imgfile[3]));			
-			플레이어2.setIcon(new ImageIcon(imgfile[2]));		
+			gameplayer1.setIcon(new ImageIcon(imgfile[3]));			
+			gameplayer2.setIcon(new ImageIcon(imgfile[2]));		
 		}
 		else if(m == 3) {
-			player1 = new 토르("토르");
-			player2 = new 캡틴아메리카("캡틴아메리카");
+			player1 = new Thor("Thor");
+			player2 = new CaptinAmerica("Captin America");
 			
-			플레이어1.setIcon(new ImageIcon(imgfile[2]));			
-			플레이어2.setIcon(new ImageIcon(imgfile[0]));		
+			gameplayer1.setIcon(new ImageIcon(imgfile[2]));			
+			gameplayer2.setIcon(new ImageIcon(imgfile[0]));		
 		}
 		else if (m == 4) {
-			player1 = new 호크아이("호크아이");
-			player2 = new 캡틴아메리카("캡틴아메리카");
+			player1 = new HawkEye("Hawk eye");
+			player2 = new CaptinAmerica("Captin America");
 			
-			플레이어1.setIcon(new ImageIcon(imgfile[4]));
-			플레이어2.setIcon(new ImageIcon(imgfile[0]));		
+			gameplayer1.setIcon(new ImageIcon(imgfile[4]));
+			gameplayer2.setIcon(new ImageIcon(imgfile[0]));		
 		}
 		else if (m == 5) {
-			player1 = new 블랙위도우("블랙위도우");
-			player2 = new 헐크("헐크");
+			player1 = new BlackWidow("Black widow");
+			player2 = new Hulk("Hulk");
 			
-			플레이어1.setIcon(new ImageIcon(imgfile[3]));
-			플레이어2.setIcon(new ImageIcon(imgfile[1]));		
+			gameplayer1.setIcon(new ImageIcon(imgfile[3]));
+			gameplayer2.setIcon(new ImageIcon(imgfile[1]));		
 		}		
 	}
 }

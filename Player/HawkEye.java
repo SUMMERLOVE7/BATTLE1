@@ -3,10 +3,10 @@ import MyInterface.*;
 import Weapon.*;
 import View.*;
 
-public class 호크아이 extends Player implements Shootable, Attackable{
+public class HawkEye extends Player implements Shootable, Attackable{
 	
-	public 호크아이() {}
-	public 호크아이(String name) {
+	public HawkEye() {}
+	public HawkEye(String name) {
 		super(name);
 		this.setPower(80);
 		this.sethp(700);
@@ -16,10 +16,10 @@ public class 호크아이 extends Player implements Shootable, Attackable{
 		
 		if(this.getWeapon() instanceof Shootable) {			
 			this.getWeapon().shoot(target);
-			System.out.println(this.getWeapon().name+" 공격!!!");	
+			System.out.println(this.getWeapon().name+" Attack!!!");	
 		}
 		else {
-			System.out.println("공격 실패!호크아이는 오직 총과 활만 사용 가능합니다");			
+			System.out.println("Attack Failed! Hawk Eye can use only gun and bow.");			
 		}
 	}
 	
@@ -35,7 +35,7 @@ public class 호크아이 extends Player implements Shootable, Attackable{
 			weapon.shoot(target);
 		}
 		else {
-			System.out.println("공격 실패!호크아이는 오직 총과 활만 사용 가능합니다");
+			System.out.println("Attack Failed! Hawk Eye can use only gun and bow.");
 		}
 	}	
 }

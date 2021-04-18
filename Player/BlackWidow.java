@@ -3,9 +3,9 @@ import Weapon.*;
 import MyInterface.*;
 import View.*;
 
-public class 블랙위도우 extends Player implements Shootable, Attackable{
-	public 블랙위도우() {}
-	public 블랙위도우(String name) {
+public class BlackWidow extends Player implements Shootable, Attackable{
+	public BlackWidow() {}
+	public BlackWidow(String name) {
 		super(name);
 		this.setPower(70);
 		this.sethp(700);
@@ -13,10 +13,10 @@ public class 블랙위도우 extends Player implements Shootable, Attackable{
 	public void shoot(Player target) {
 		if(this.getWeapon() instanceof Shootable) {						
 			this.getWeapon().shoot(target);
-			System.out.println(this.getWeapon().name+" 공격!!!");	
+			System.out.println(this.getWeapon().name+" Attack!!!");	
 		}
 		else {
-			System.out.println("공격 실패!블랙위도우는 오직 총과 활만 사용 가능합니다");	
+			System.out.println("Attack Failed! Black Widow can use only gun and bow");	
 		}
 	}
 	public void attack(Player target) {
@@ -31,7 +31,7 @@ public class 블랙위도우 extends Player implements Shootable, Attackable{
 			weapon.shoot(target);
 		}
 		else {
-			System.out.println("공격 실패!블랙위도우는 오직 총과 활만 사용 가능합니다");
+			System.out.println("Attack Failed! Black Widow can use only gun and bow");
 		}
 	}
 }

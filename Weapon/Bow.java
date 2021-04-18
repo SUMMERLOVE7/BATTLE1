@@ -4,28 +4,28 @@ import MyInterface.Shootable;
 import java.util.ArrayList;
 import Player.*;
 
-public class 활 extends Weapon implements Shootable{
+public class Bow extends Weapon implements Shootable{
 
 		int box_size = 10;
-		int 화살power = 10;
-		private ArrayList<화살> box = new ArrayList<화살>();
+		int arrowpower = 10;
+		private ArrayList<Arrow> box = new ArrayList<Arrow>();
 		
-		public 활() {
-			this.name = "활";
+		public Bow() {
+			this.name = "Bow";
 			this.setPower(20);
 			makeBullet();
-			System.out.println("활과 화살 생성"+box_size+"개");
+			System.out.println("Create Bow and "+box_size + "Arrow");
 		}
 		public void makeBullet() {
-			System.out.println("화살을 만들자");
+			System.out.println("Making Arrow");
 			
 			for(int i = 0; i<box_size; i++) {
-				box.add(new 화살(10));
+				box.add(new Arrow(10));
 			}
 			this.setPower(this.getPower()+this.getBulletPower());
 		}
 		public int getBulletPower() {
-			return 화살power;
+			return arrowpower;
 		}
 		public void shoot(Player target) {
 			
@@ -34,10 +34,10 @@ public class 활 extends Weapon implements Shootable{
 				//return;
 			}
 			else {
-				System.out.println(target.name+"에게 활쏘기 공격!!");
+				System.out.println("To" +target.name+" shoot a bow!!");
 				box.remove(box.size() - 1);
 				target.sethp(target.gethp() - player.getPower() - this.getPower());
-				System.out.println("화살이 "+box.size()+"개 남았습니다.");
+				System.out.println(box.size()+"arrow remained");
 			}
 			
 		}		

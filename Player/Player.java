@@ -43,7 +43,7 @@ public class Player implements Attackable{
     public void setWeapon(Weapon weapon) {
     	
     	this.weapon = weapon;
-    	System.out.println("무기로 "+weapon.name+"(이/가) 선택되었습니다");    	
+    	System.out.println(weapon.name+" has been selected");    	
     }
     
     public Weapon getWeapon() {
@@ -68,7 +68,7 @@ public class Player implements Attackable{
     }
     
     public void show() {
-    	System.out.println(this.name+"   현재 hp : "+this.gethp());
+    	System.out.println(this.name+"   current hp : "+this.gethp());
     	System.out.println("----------------------------------------------");
     }   
 }

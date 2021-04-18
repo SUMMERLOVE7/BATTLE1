@@ -76,9 +76,9 @@ public class GameWindow extends JFrame {
 		btnNewButton.setBounds(298, 228, 209, 109);
 		contentPane.add(btnNewButton);
 		
-		JLabel 배경 = new JLabel("");
-		배경.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uAE30\uBCF8\uD50C\uB808\uC774\uBC30\uACBD.PNG"));
-		배경.setBounds(12, 0, 921, 633);
-		contentPane.add(배경);
+		JLabel background1 = new JLabel("");
+		background1.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uAE30\uBCF8\uD50C\uB808\uC774\uBC30\uACBD.PNG"));
+		background1.setBounds(12, 0, 921, 633);
+		contentPane.add(background1);
 	}
 }

@@ -1,11 +1,11 @@
 package Weapon;
 
-public class ÃÑ¾Ë extends Weapon{
+public class Bullet extends Weapon{
 
-	public ÃÑ¾Ë() {	
-		System.out.println("ÃÑ¾ËÀåÂø");
+	public Bullet() {	
+		System.out.println("Equip Bullet");
 	}
-	public ÃÑ¾Ë(int power) {
+	public Bullet(int power) {
 		power += 20;
 	}
 	

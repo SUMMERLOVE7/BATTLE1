@@ -2,14 +2,14 @@ package Weapon;
 import Player.*;
 import MyInterface.Throowable;
 
-public class 방패 extends Weapon implements Throowable{
+public class Shield extends Weapon implements Throowable{
 	
-	public 방패() {
+	public Shield() {
 		this.setPower(30);
 		this.name = "방패";
 	}
 	public void throow(Player target) {
-		System.out.println(target.name+"에게 방패던지기!!!");
+		System.out.println("To " +target.name+" throw Shield!!!");
 		target.sethp(target.gethp() - this.getPower());	
 	}
 }

@@ -23,11 +23,11 @@ import MyInterface.*;
 public class GameWindow_3 extends JFrame {
 
 	private JPanel contentPane;
-	JButton »∞ = new JButton("");
-	JButton πŸ¿ß = new JButton("");
-	JButton √— = new JButton("");
-	JButton π®¥œ∏£ = new JButton("");
-	JButton πÊ∆– = new JButton("");
+	JButton bow = new JButton("");
+	JButton rock = new JButton("");
+	JButton gun = new JButton("");
+	JButton hammer = new JButton("");
+	JButton shield = new JButton("");
 	
 	Weapon weapon;
 	private final JButton btnNewButton = new JButton("\uB2EB\uAE30");
@@ -65,64 +65,64 @@ public class GameWindow_3 extends JFrame {
 		lblNewLabel_1.setFont(new Font("DXΩ√¿Œ∞˙≥™", Font.PLAIN, 40));
 		lblNewLabel_1.setBounds(37, 34, 582, 69);
 		contentPane.add(lblNewLabel_1);
-		πÊ∆–.addActionListener(new ActionListener() {
+		shield.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {		
-				System.out.println("π´±‚∑Œ πÊ∆– º±≈√");
-				weapon = new πÊ∆–();
+				System.out.println("Select Shield as weapon");
+				weapon = new Shield();
 				dispose();
 			}
 		});
 		
 		
-		πÊ∆–.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBC29\uD3281.png"));
-		πÊ∆–.setBounds(577, 127, 206, 171);
-		contentPane.add(πÊ∆–);
-		π®¥œ∏£.addActionListener(new ActionListener() {
+		shield.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBC29\uD3281.png"));
+		shield.setBounds(577, 127, 206, 171);
+		contentPane.add(shield);
+		hammer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("π®¥œ∏£ º±≈√");
-				weapon = new π®¥œ∏£();
+				System.out.println("Select Hammer as weapon");
+				weapon = new Hammer();
 				dispose();
 			}
 		});
 		
 		
-		π®¥œ∏£.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBB20\uB2C8\uB9742.png"));
-		π®¥œ∏£.setBounds(318, 127, 200, 200);
-		contentPane.add(π®¥œ∏£);
-		√—.addActionListener(new ActionListener() {
+		hammer.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBB20\uB2C8\uB9742.png"));
+		hammer.setBounds(318, 127, 200, 200);
+		contentPane.add(hammer);
+		gun.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("√— º±≈√");
-				weapon = new √—();		
+				System.out.println("Select Gun as weapon");
+				weapon = new Gun();		
 				dispose();
 			}
 		});
 		
 		
-		√—.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uCD1D1.png"));
-		√—.setBounds(58, 370, 200, 148);
-		contentPane.add(√—);
-		πŸ¿ß.addActionListener(new ActionListener() {
+		gun.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uCD1D1.png"));
+		gun.setBounds(58, 370, 200, 148);
+		contentPane.add(gun);
+		rock.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
-				weapon = new πŸ¿ß();					
+				weapon = new Rock();					
 				dispose();
 			}
 		});
 		
 	
-		πŸ¿ß.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBC14\uC704.png"));
-		πŸ¿ß.setBounds(577, 327, 206, 191);
-		contentPane.add(πŸ¿ß);
+		rock.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uBC14\uC704.png"));
+		rock.setBounds(577, 327, 206, 191);
+		contentPane.add(rock);
 		
 	
-		»∞.addActionListener(new ActionListener() {
+		bow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				weapon = new »∞();		
+				weapon = new Bow();		
 				dispose();
 			}
 		});
-		»∞.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD65C.png"));
-		»∞.setBounds(58, 127, 200, 171);
-		contentPane.add(»∞);
+		bow.setIcon(new ImageIcon("D:\\\uC774\uB300\\2\uD559\uB144 1\uD559\uAE30\\\uAC1D\uCCB4\uC9C0\uD5A5\uD504\uB85C\uADF8\uB798\uBC0D\\\uAE30\uB9D0\uACFC\uC81C\\\uD65C.png"));
+		bow.setBounds(58, 127, 200, 171);
+		contentPane.add(bow);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();

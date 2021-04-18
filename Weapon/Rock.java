@@ -3,18 +3,18 @@ import MyInterface.*;
 
 import Player.Player;
 
-public class 바위 extends Weapon implements Throowable{
+public class Rock extends Weapon implements Throowable{
 
 	int size = 0;
 	
-	public 바위() {
+	public Rock() {
 		size = (int)(Math.random()*800) % 54 + 30;
 		this.setPower(size);
 		this.name = "바위";		
 	}
 	public void throow(Player target) {
 		
-		System.out.println(target.name+"에게 바위던지기 공격!!");
+		System.out.println("To"+target.name+" throw rock!!");
 		target.sethp(target.gethp() - this.getPower());		
 	}
 	

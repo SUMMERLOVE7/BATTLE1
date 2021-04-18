@@ -3,30 +3,30 @@ import Weapon.*;
 import View.*;
 import MyInterface.*;
 
-public class 캡틴아메리카 extends Player implements Throowable, Attackable{
+public class CaptinAmerica extends Player implements Throowable, Attackable{
 
-	public 캡틴아메리카() {}
-	public 캡틴아메리카(String name) {
+	public CaptinAmerica() {}
+	public CaptinAmerica(String name) {
 		super(name);
 		this.setPower(80);
 		this.sethp(800);
 	}
 	public void throow(Player target) {
 		try {			
-			if (this.getWeapon() instanceof 묠니르) {
-				System.out.println("공격실패!묠니르는 토르만이 사용할 수 있습니다.");
+			if (this.getWeapon() instanceof Hammer) {
+				System.out.println("Attack Failed! Only Thor can use hammer.");
 		    }
 		
-			else if (this.getWeapon() instanceof 바위) {
-				System.out.println("공격실패!바위던지기 공격은 헐크만 가능합니다.");					    		    
+			else if (this.getWeapon() instanceof Rock) {
+				System.out.println("Attack Failed! Only Hulk can throw rock");					    		    
 		    }	
 			
 			else {		
-				System.out.println(this.getWeapon().name+"으로 공격!!!");
+				System.out.println(this.getWeapon().name+" attack!!!");
 				this.getWeapon().throow(target);
 			}
 		}catch(ClassCastException e) {
-			System.out.println(this.getWeapon()+"은 던질 수 없습니다.");
+			System.out.println(this.getWeapon()+"cannot be used.");
 		}		
 		
 	}
@@ -40,14 +40,14 @@ public class 캡틴아메리카 extends Player implements Throowable, Attackable{
 		
 		int power = 0;
 		
-		if(weapon instanceof 바위) {
-			System.out.println("공격실패!바위던지기 공격은 헐크만 가능합니다.");	
+		if(weapon instanceof Rock) {
+			System.out.println("Attack Failed! Only Hulk can throw rock");	
 		}
-		else if(weapon instanceof 묠니르) {
-			System.out.println("공격실패!묠니르는 토르만이 사용할 수 있습니다.");
+		else if(weapon instanceof Hammer) {
+			System.out.println("Attack Failed! Only Thor can use hammer.");
 		}
 		else {
-			System.out.println(this.getWeapon().name+"으로 공격!!!");
+			System.out.println(this.getWeapon().name+" Attack!!!");
 			power = this.getWeapon().getPower()+this.getPower();
 			target.sethp(target.gethp() - power);
 		}			

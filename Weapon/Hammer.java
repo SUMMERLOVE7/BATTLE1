@@ -2,15 +2,15 @@ package Weapon;
 import MyInterface.*;
 import Player.Player;
 
-public class ¹¨´Ï¸£ extends Weapon implements Throowable{
+public class Hammer extends Weapon implements Throowable{
 
 	
-	public ¹¨´Ï¸£() {
+	public Hammer() {
 		this.setPower(100);
-		this.name = "¹¨´Ï¸£";
+		this.name = "Hammer";
 	}
 	public void throow(Player target) {
-		System.out.println(target.name+"¿¡°Ô ¹¨´Ï¸£ ´øÁö±â!!!!!!!!!!!");
+		System.out.println("To"+target.name+", throw Hammer!!!!!!!!!!!");
 		target.sethp(target.gethp() - this.getPower());		
 	}
 	public void attack(Player target) {
